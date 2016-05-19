@@ -3,7 +3,7 @@
     <parent>
         <groupId>org.connectopensource</groupId>
         <artifactId>SoapUI_Test</artifactId>
-        <version>4.7.0-SNAPSHOT</version>
+        <version>4.7.0</version>
     </parent>
 
     <artifactId>RegressionSuite</artifactId>
@@ -45,7 +45,23 @@
                 <module>Direct</module>
             </modules>
         </profile>
-		
+		<profile>
+            <id>manual-testing</id>
+           	<modules>
+		         <module>Bimodal/ValidateRDMessageSpecVersionTest</module>
+				  <module>Bimodal/ValidateSAMLResourceURIAttributeTest</module>
+				 <module>Passthru/AuditLogging-Passthrough</module>
+				 <module>Passthru/DocQueryErrorCodesPassthru</module>
+				 <module>Passthru/NHINCReceivingXDRAsyncRequestTests</module>
+				 <module>Passthru/NHINCReceivingXDRAsyncResponseTests</module>
+				 <module>Standard/EntitySendingXDRAsyncReqTests</module>
+				 <module>Standard/EntitySendingXDRAsyncResponseTests</module>
+				 <module>Standard/Fanout-Test</module>
+				 <module>Standard/TransactionIDTest</module>
+				 <module>startEmbedded</module>
+				 <module>stopEmbedded</module> 
+			 </modules>
+			 </profile>
     </profiles>
 
     <build>
